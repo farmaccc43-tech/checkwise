@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DeepGuard AI - Trung tâm nhận biết tin giả và lừa đảo bằng AI.">
+  <title>DeepGuard AI — Nhận biết lừa đảo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="bg-orb orb-1"></div><div class="bg-orb orb-2"></div><div class="bg-orb orb-3"></div>
+
+  <header class="navbar">
+    <a href="#home" class="brand"><span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span><span>DeepGuard<span class="accent"> AI</span></span></a>
+    <nav id="nav">
+      <a href="#home">Trang chủ</a><a href="#checker">Kiểm tra</a><a href="#knowledge">Kiến thức</a><a href="#guide">Hướng dẫn</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" aria-label="Đổi giao diện"><i class="fa-solid fa-moon"></i></button>
+    <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+  </header>
+
+  <main id="home">
+    <section class="hero section reveal">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> AI SECURITY • BẢO VỆ TRỰC TUYẾN</div>
+        <h1>Đừng để <span>kẻ lừa đảo</span><br>đánh lừa bạn.</h1>
+        <p>Kiểm tra tin nhắn, đường link, hình ảnh, âm thanh và video để tìm những dấu hiệu đáng ngờ trước khi bạn hành động.</p>
+        <div class="hero-actions"><a href="#checker" class="btn btn-primary"><i class="fa-solid fa-wand-magic-sparkles"></i> Kiểm tra ngay</a><a href="#knowledge" class="btn btn-ghost">Tìm hiểu cách nhận biết <i class="fa-solid fa-arrow-down"></i></a></div>
+        <div class="trust-row"><span><i class="fa-solid fa-check"></i> Phân tích đa định dạng</span><span><i class="fa-solid fa-lock"></i> Ưu tiên quyền riêng tư</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="scan-card">
+          <div class="scan-top"><span><i class="fa-solid fa-circle-nodes"></i> AI SCANNER</span><span class="live"><i></i> LIVE</span></div>
+          <div class="radar"><div class="radar-grid"></div><div class="radar-sweep"></div><div class="radar-core"><i class="fa-solid fa-shield-halved"></i></div></div>
+          <div class="scan-status"><div><small>TRẠNG THÁI</small><strong>Đang sẵn sàng</strong></div><span class="status-dot"></span></div>
+          <div class="mini-metrics"><div><strong>24/7</strong><small>Giám sát</small></div><div><strong>5+</strong><small>Định dạng</small></div><div><strong>AI</strong><small>Phân tích</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section reveal">
+      <div><div class="stat"><strong data-count="5">0</strong><span> loại nội dung</span></div></div>
+      <div><div class="stat"><strong data-count="4">0</strong><span> mức cảnh báo</span></div></div>
+      <div><div class="stat"><strong data-count="24">0</strong><span>/7 sẵn sàng</span></div></div>
+      <div><div class="stat"><strong>AI</strong><span> hỗ trợ phân tích</span></div></div>
+    </section>
+
+    <section id="checker" class="checker section reveal">
+      <div class="section-heading"><div class="eyebrow">01 • AI CHECKER</div><h2>Kiểm tra điều bạn <span>nghi ngờ</span></h2><p>Chọn loại nội dung, cung cấp thông tin và nhận bản phân tích mô phỏng ngay trên trình duyệt.</p></div>
+      <div class="checker-layout">
+        <aside class="type-list">
+          <button class="type-btn active" data-type="message"><i class="fa-solid fa-message"></i><span>Tin nhắn</span><small>SMS / Chat</small></button>
+          <button class="type-btn" data-type="link"><i class="fa-solid fa-link"></i><span>Đường link</span><small>URL / Website</small></button>
+          <button class="type-btn" data-type="image"><i class="fa-regular fa-image"></i><span>Hình ảnh</span><small>Ảnh / QR</small></button>
+          <button class="type-btn" data-type="audio"><i class="fa-solid fa-microphone"></i><span>Âm thanh</span><small>Ghi âm / Call</small></button>
+          <button class="type-btn" data-type="video"><i class="fa-solid fa-video"></i><span>Video</span><small>Video / Deepfake</small></button>
+        </aside>
+        <div class="checker-panel">
+          <div class="panel-head"><div><h3 id="inputTitle">Phân tích tin nhắn</h3><p id="inputHint">Dán nội dung SMS, Zalo, Messenger hoặc email vào ô bên dưới.</p></div><span class="ai-chip"><i class="fa-solid fa-sparkles"></i> AI READY</span></div>
+          <textarea id="messageInput" placeholder="Ví dụ: “Tài khoản của bạn sắp bị khóa. Hãy bấm vào đường link để xác minh ngay...”"></textarea>
+          <div id="linkInput" class="hidden"><div class="input-wrap"><i class="fa-solid fa-link"></i><input id="urlField" type="url" placeholder="https://example.com"></div></div>
+          <div id="uploadInput" class="upload-zone hidden"><input id="fileField" type="file" accept="image/*,audio/*,video/*"><label for="fileField"><span class="upload-icon"><i class="fa-solid fa-cloud-arrow-up"></i></span><strong>Kéo thả tệp vào đây</strong><small>hoặc bấm để chọn • Ảnh, âm thanh, video</small></label><div id="filePreview"></div></div>
+          <div class="panel-foot"><span id="charCount">0 ký tự</span><button class="btn btn-primary" id="analyzeBtn"><i class="fa-solid fa-bolt"></i> Phân tích AI</button></div>
+          <div class="disclaimer"><i class="fa-solid fa-circle-info"></i> Kết quả chỉ là đánh giá hỗ trợ. Không tải lên thông tin nhạy cảm hoặc mã OTP.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="result" class="result section hidden">
+      <div class="result-card">
+        <div class="result-head"><div class="result-icon"><i class="fa-solid fa-triangle-exclamation"></i></div><div><small>AI RISK ANALYSIS</small><h2 id="resultTitle">Có dấu hiệu cần cảnh giác</h2></div><span id="riskBadge" class="risk high">RỦI RO CAO</span></div>
+        <div class="risk-meter"><div><span>Mức độ rủi ro</span><strong id="riskScore">78/100</strong></div><div class="meter"><span id="meterFill"></span></div></div>
+        <div class="findings" id="findings"></div>
+        <div class="result-actions"><button class="btn btn-primary" id="newCheck"><i class="fa-solid fa-rotate"></i> Kiểm tra nội dung khác</button><button class="btn btn-ghost" id="copyResult"><i class="fa-regular fa-copy"></i> Sao chép kết quả</button></div>
+      </div>
+    </section>
+
+    <section id="knowledge" class="knowledge section reveal">
+      <div class="section-heading"><div class="eyebrow">02 • KNOWLEDGE</div><h2>Biết dấu hiệu trước khi <span>mắc bẫy</span></h2><p>Những nguyên tắc cơ bản giúp bạn kiểm tra thông tin một cách bình tĩnh.</p></div>
+      <div class="knowledge-grid">
+        <article class="knowledge-card"><span class="card-num">01</span><i class="fa-solid fa-clock"></i><h3>Ép bạn phải làm ngay</h3><p>Kẻ gian thường tạo cảm giác khẩn cấp: tài khoản sắp khóa, phạt nguội, nhận quà trong vài phút...</p><button class="learn-btn">Xem dấu hiệu <i class="fa-solid fa-arrow-right"></i></button></article>
+        <article class="knowledge-card"><span class="card-num">02</span><i class="fa-solid fa-building-columns"></i><h3>Giả danh tổ chức</h3><p>Hãy kiểm tra lại qua kênh chính thức thay vì gọi lại số hoặc bấm link do người lạ cung cấp.</p><button class="learn-btn">Xem dấu hiệu <i class="fa-solid fa-arrow-right"></i></button></article>
+        <article class="knowledge-card"><span class="card-num">03</span><i class="fa-solid fa-key"></i><h3>Xin OTP & thông tin bí mật</h3><p>Không cung cấp mật khẩu, mã OTP, mã xác thực hoặc thông tin tài khoản chỉ vì một tin nhắn/cuộc gọi.</p><button class="learn-btn">Xem dấu hiệu <i class="fa-solid fa-arrow-right"></i></button></article>
+        <article class="knowledge-card"><span class="card-num">04</span><i class="fa-solid fa-money-bill-transfer"></i><h3>Yêu cầu chuyển tiền</h3><p>Đặc biệt cảnh giác với yêu cầu chuyển tiền vào tài khoản cá nhân, ví lạ hoặc quét QR không rõ nguồn.</p><button class="learn-btn">Xem dấu hiệu <i class="fa-solid fa-arrow-right"></i></button></article>
+        <article class="knowledge-card"><span class="card-num">05</span><i class="fa-solid fa-globe"></i><h3>Website giả mạo</h3><p>Kiểm tra kỹ tên miền, chính tả và nguồn link. Đừng tin chỉ vì trang có logo hoặc giao diện giống thương hiệu.</p><button class="learn-btn">Xem dấu hiệu <i class="fa-solid fa-arrow-right"></i></button></article>
+        <article class="knowledge-card"><span class="card-num">06</span><i class="fa-solid fa-user-secret"></i><h3>Giọng nói & hình ảnh giả</h3><p>Deepfake có thể làm nội dung trông rất thuyết phục. Hãy xác minh bằng một kênh khác trước khi hành động.</p><button class="learn-btn">Xem dấu hiệu <i class="fa-solid fa-arrow-right"></i></button></article>
+      </div>
+    </section>
+
+    <section id="guide" class="guide section reveal">
+      <div class="section-heading"><div class="eyebrow">03 • SAFETY GUIDE</div><h2>Quy tắc <span>STOP</span></h2></div>
+      <div class="steps">
+        <div class="step"><span>S</span><div><h3>STOP — Dừng lại</h3><p>Không vội bấm link, chuyển tiền hay cung cấp mã xác thực.</p></div></div>
+        <div class="step"><span>T</span><div><h3>THINK — Suy nghĩ</h3><p>Kiểm tra người gửi, ngữ cảnh, tên miền và yêu cầu bất thường.</p></div></div>
+        <div class="step"><span>O</span><div><h3>OTHER CHANNEL — Xác minh</h3><p>Liên hệ tổ chức/người quen bằng số điện thoại hoặc website chính thức.</p></div></div>
+        <div class="step"><span>P</span><div><h3>PROTECT — Bảo vệ</h3><p>Nếu đã cung cấp thông tin, hãy đổi mật khẩu và liên hệ đơn vị liên quan càng sớm càng tốt.</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="footer-brand"><span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span><strong>DeepGuard AI</strong></div><p>Công cụ giáo dục nhận biết dấu hiệu lừa đảo • Kết quả AI chỉ mang tính tham khảo.</p><span>© 2026 DeepGuard</span></footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
